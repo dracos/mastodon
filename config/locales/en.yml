@@ -10,7 +10,9 @@ en:
     contact_missing: Not set
     contact_unavailable: N/A
     description_headline: What is %{domain}?
-    domain_count_after: other instances
+    domain_count_after:
+      one: other instance
+      other: other instances
     domain_count_before: Connected to
     extended_description_html: |
       <h3>A good place for rules</h3>
@@ -29,9 +31,13 @@ en:
     learn_more: Learn more
     other_instances: Instance list
     source_code: Source code
-    status_count_after: statuses
+    status_count_after:
+      one: status
+      other: statuses
     status_count_before: Who authored
-    user_count_after: users
+    user_count_after:
+      one: user
+      other: users
     user_count_before: Home to
     what_is_mastodon: What is Mastodon?
   accounts:
