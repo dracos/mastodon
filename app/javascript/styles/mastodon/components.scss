@@ -695,6 +695,13 @@
     }
   }
 
+  .status__content__hex_colour {
+    display: inline-block;
+    border-radius: 5px;
+    width: 10px;
+    height: 10px;
+  }
+
   .status__content__spoiler-link {
     background: $action-button-color;
 

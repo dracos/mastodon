@@ -50,6 +50,12 @@ export default class StatusContent extends React.PureComponent {
         link.setAttribute('title', mention.get('acct'));
       } else if (link.textContent[0] === '#' || (link.previousSibling && link.previousSibling.textContent && link.previousSibling.textContent[link.previousSibling.textContent.length - 1] === '#')) {
         link.addEventListener('click', this.onHashtagClick.bind(this, link.text), false);
+        if (link.textContent.search(/^#[0-9a-f]{3}([0-9a-f]{3})?$/i) > -1) {
+          var colour_el = document.createElement('span');
+          colour_el.classList.add('status__content__hex_colour');
+          colour_el.style.backgroundColor = link.textContent;
+          link.insertAdjacentElement('beforebegin', colour_el);
+        }
       } else {
         link.setAttribute('title', link.href);
       }
